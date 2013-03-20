@@ -1,0 +1,1 @@
+Html5/javascript webcomponent dat rss-feeds uitleest en deze offline bijhoudt
