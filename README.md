@@ -12,7 +12,7 @@ Onze taken binnen de scope hebben we ingedeeld volgens het MoSCoW principe. De M
 
 
 ##Scope
-(M) uitlezen van XML file van het Nieuwsblad
+- **Must** uitlezen van XML file van het Nieuwsblad
 (M) De reader presenteert de artikels in een optimale vorm (Verschillende templates, op basis van de artikels wordt een passende template gekozen) 
 (M) De reader is configureerbaar (themes, fonts, blader effecten, kleur ...) 
 Themes(fonts, kleur, ...)
