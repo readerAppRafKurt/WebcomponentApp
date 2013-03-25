@@ -14,15 +14,15 @@ Onze taken binnen de scope hebben we ingedeeld volgens het MoSCoW principe. De M
 ##Scope
 - **Must:** uitlezen van XML file van het Nieuwsblad
 - **Must:** De reader presenteert de artikels in een optimale vorm (Verschillende templates, op basis van de artikels wordt een passende template gekozen) 
-(M) De reader is configureerbaar (themes, fonts, blader effecten, kleur ...) 
-Themes(fonts, kleur, ...)
-Bladereffect en (keuze uit verschillende animaties)
-Verschillende, meerdere  RSS feed(s)
-(M)  De reader is adaptive aan de verschillende schermresoluties
-(M)  De reader module en download module kunnen als blackbox makkelijk geïntegreerd worden in andere apps
-(M)  Aanmaken van een 5-tal verschillende templates.
-(M) De reader kan elk soort 2.0 Rss-feed inlezen
-(M) De artikels moeten offline leesbaar zijn 
+- **Must:** De reader is configureerbaar (themes, fonts, blader effecten, kleur ...) 
+	Themes(fonts, kleur, ...)
+	Bladereffect en (keuze uit verschillende animaties)
+	Verschillende, meerdere  RSS feed(s)
+- **Must:** De reader is adaptive aan de verschillende schermresoluties
+- **Must:** De reader module en download module kunnen als blackbox makkelijk geïntegreerd worden in andere apps
+- **Must:** Aanmaken van een 5-tal verschillende templates.
+- **Must:** De reader kan elk soort 2.0 Rss-feed inlezen
+- **Must:** De artikels moeten offline leesbaar zijn 
 (W) De reader kan nog andere populaire vormen van feeds inlezen en bijhouden (Atom, custom made xml ...)
 (M) Zoekfunctie naar artikels op trefwoord in titel en/of artikeltekst
 (S) Uitgebreide zoekfunctie met verschillende parameters (feed, datum, auteur, trefwoord ...)
