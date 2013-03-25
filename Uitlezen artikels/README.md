@@ -1,6 +1,6 @@
 ##User story - Uitlezen artikels uit rss-feeds
-- Als consumer wil ik bij mijn digitale krant livenieuws kunnen consumeren.
-- als tablet en smartphonegebruiker wil ik vers snelnieuws consumeren zodat ik op de hoogte ben van het allerlaatste livenieuws, en dit uit verschillende hoofdcategorieën
+- Als consumer wil ik bij mijn digitale krant live nieuws kunnen consumeren.
+- Als tablet en smartphonegebruiker wil ik vers snelnieuws consumeren zodat ik op de hoogte ben van het allerlaatste live nieuws, en dit uit verschillende hoofdcategorieën.
 <br />
 <br />
 
