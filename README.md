@@ -23,27 +23,27 @@ Onze taken binnen de scope hebben we ingedeeld volgens het MoSCoW principe. De M
 - **Must:** Aanmaken van een 5-tal verschillende templates.
 - **Must:** De reader kan elk soort 2.0 Rss-feed inlezen
 - **Must:** De artikels moeten offline leesbaar zijn 
-(W) De reader kan nog andere populaire vormen van feeds inlezen en bijhouden (Atom, custom made xml ...)
-(M) Zoekfunctie naar artikels op trefwoord in titel en/of artikeltekst
-(S) Uitgebreide zoekfunctie met verschillende parameters (feed, datum, auteur, trefwoord ...)
-(C) Zoekfunctie met autocomplete
-(S) De reader aanpassen adhv de historiek van de gebruiker. vb. gebruiker leest veel sport, dan wordt er een soort van "sport"reader gemaakt en daarnaast de gewone reader. -> content driven
-(S) Meerdere users per reader met historiek (feeds, theme, effect, leesgeschiedenis ...)
-(S)  Per gebruiker  [min-max] aantal feeds, themes, effecten
-(C)  Per gebruiker, per feed  [min- max] bijhouden artikels (tijdsduur, aantal) + instelbaar
-(C) Geolocatie gebruiken voor een weerberichtmodule, georeclame, regionieuws
+- **Wouldn't:** De reader kan nog andere populaire vormen van feeds inlezen en bijhouden (Atom, custom made xml ...)
+- **Must:** Zoekfunctie naar artikels op trefwoord in titel en/of artikeltekst
+- **Should:** Uitgebreide zoekfunctie met verschillende parameters (feed, datum, auteur, trefwoord ...)
+- **Could:** Zoekfunctie met autocomplete
+- **Should:** De reader aanpassen adhv de historiek van de gebruiker. vb. gebruiker leest veel sport, dan wordt er een soort van "sport"reader gemaakt en daarnaast de gewone reader. -> content driven
+- **Should:** Meerdere users per reader met historiek (feeds, theme, effect, leesgeschiedenis ...)
+- **Should:**  Per gebruiker  [min-max] aantal feeds, themes, effecten
+- **Could:**  Per gebruiker, per feed  [min- max] bijhouden artikels (tijdsduur, aantal) + instelbaar
+- **Could:** Geolocatie gebruiken voor een weerberichtmodule, georeclame, regionieuws
 
 Voor de webcomponent dachten we nog een gebruikers community te maken. Dit lijkt ons een interessante toevoeging
-(C)  Inschrijven, uitschrijven,  herinschrijven, password recovery
-(C)  Per artikel (commentaren/reacties, social plugin buttons, polls, analyse, ratings, recensies, mail dit artikel
-(C)  Polls
-(C)  Reclame
-(C)  User driven artikels aan de hand van leesgeschiedenis
-(C)  Blok => Meest gelezen, hoogste rating, recenste ...
+- **Could:**  Inschrijven, uitschrijven,  herinschrijven, password recovery
+- **Could:**  Per artikel (commentaren/reacties, social plugin buttons, polls, analyse, ratings, recensies, mail dit artikel
+- **Could:**  Polls
+- **Could:**  Reclame
+- **Could:**  User driven artikels aan de hand van leesgeschiedenis
+- **Could:**  Blok => Meest gelezen, hoogste rating, recenste ...
 
 De belangrijkste resticties: 
-De Android applicatie moet werken op de nieuwste versie.
-De webcomponent en de android applicatie moet zowel werken op smartphones als op tablets.
-De webcomponent moet werken met verschillende browsers. 
-De webcomponent gebruikt een ander platform, namelijk HTML5 en Javascript. Daardoor is het mogelijk dat niet alle opportuniteiten uitgewerkt kunnen worden.
+- De Android applicatie moet werken op de nieuwste versie.
+- De webcomponent en de android applicatie moet zowel werken op smartphones als op tablets.
+- De webcomponent moet werken met verschillende browsers. 
+- De webcomponent gebruikt een ander platform, namelijk HTML5 en Javascript. Daardoor is het mogelijk dat niet alle opportuniteiten uitgewerkt kunnen worden.
 
