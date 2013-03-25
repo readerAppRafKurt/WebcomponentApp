@@ -10,7 +10,6 @@
 <br />
 
 ##Flow of events
-<br />
 
 >1. **Consumer:** Browse news channels
 >2. **System:**	Show available news channels
@@ -20,5 +19,8 @@
 >6. **System:** Show article details
 >7. **Consumer:** Read article
 >8. **Consumer:** Go back to available news channels
+<br />
+<br />
 
+##Sequence diagramma
 
