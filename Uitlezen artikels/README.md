@@ -23,6 +23,7 @@
 <br />
 
 ##Sequence diagramma
+<br />
 <img src='http://www.mofosounds.com/assets/sequence-diagram-user-story-uitlezen-artikels.jpg' width='553'>
 <br />
 <br />
