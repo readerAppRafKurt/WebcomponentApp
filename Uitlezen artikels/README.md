@@ -5,3 +5,7 @@
 ##Screens & prototypes
 <img src='http://www.mofosounds.com/assets/user-story-uitlezen-artikels.jpg' width='553'>
 
+##Flow of events
+>1. Browse news channels
+>2. System	show available news channels
+
