@@ -6,7 +6,8 @@
 <img src='http://www.mofosounds.com/assets/user-story-uitlezen-artikels.jpg' width='553'>
 
 ##Flow of events
-
+<br />
+<br />
 
 >1. **Consumer:** Browse news channels
 >2. **System:**	Show available news channels
