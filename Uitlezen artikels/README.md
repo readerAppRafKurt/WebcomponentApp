@@ -28,4 +28,4 @@
 <img src='http://www.mofosounds.com/assets/sequence-diagram-user-story-uitlezen-artikels.jpg' width='553'>
 <br />
 <br />
-<img src='http://www.mofosounds.com/assets/sd2.jpg' width='553'>
+<img src='http://www.mofosounds.com/assets/sd2.jpg' width='750'>
