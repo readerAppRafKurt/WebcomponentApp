@@ -29,3 +29,13 @@
 <br />
 <br />
 <img src='http://www.mofosounds.com/assets/sd2.jpg' width='750'>
+
+##Packages
+
+1. Controllers
+2. Models
+3. Views
+4. Dao
+5. Repository?
+6. Utils
+7. Tests
