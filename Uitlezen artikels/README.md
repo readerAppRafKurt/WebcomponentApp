@@ -7,8 +7,9 @@
 ##Screens & prototypes
 <img src='http://www.mofosounds.com/assets/user-story-uitlezen-artikels.jpg' width='553'>
 <img src='https://raw.github.com/readerAppRafKurt/WebcomponentApp/blob/master/images/user-story-uitlezen-artikels.jpg'>
+![Screenshot](https://raw.github.com/readerAppRafKurt/WebcomponentApp/blob/master/images/user-story-uitlezen-artikels.jpg)
 
-![Settings Window](https://raw.github.com/ryanmaxwell/iArrived/master/Screenshots/Settings.png)
+
 
 <br />
 <br />
