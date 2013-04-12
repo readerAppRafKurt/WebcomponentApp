@@ -3,7 +3,7 @@
 Class-diagram van een rss-feed volgens de officiële standaard.
 Meer info op: http://cyber.law.harvard.edu/rss/rss.html
 
-##UML class diagram
+
 ![Screenshot](https://www.github.com/readerAppRafKurt/WebcomponentApp/raw/master/UML/images/rss-2.0-standard.jpg)
 
 
