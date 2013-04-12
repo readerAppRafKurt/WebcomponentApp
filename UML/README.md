@@ -1,6 +1,6 @@
 ##Uml RSS 2.0 Standaard class-diagram
 
-Class-diagram van een rss-feed volgens de officiële standaard
+Class-diagram van een rss-feed volgens de officiële standaard.
 Meer info op: http://cyber.law.harvard.edu/rss/rss.html
 
 ##UML class diagram
