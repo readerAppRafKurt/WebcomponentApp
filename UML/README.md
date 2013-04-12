@@ -1,0 +1,39 @@
+##Uml RSS 2.0 Standaard class-diagram
+
+Class-diagram van een rss-feed volgens de officiële standaard
+
+ * RSS 2.0 Standaard voor een channel/rss-feed
+ * Meer info op: http://cyber.law.harvard.edu/rss/rss.html
+ * 
+ * Required properties:
+ * 
+ * title 			De titel van de channel.  
+ * link 			De url naar een online versie van de channel. 
+ * description      Omschrijving van de channel
+ * 
+ * Optionele properties:
+ * 
+ * language 		De taal waarin de channel is geschreven
+ * copyright		Copyright van de feed 		 
+ * managingEditor 	Emailadres - Content  
+ * webMaster 		Emailadres - Technische issues  
+ * pubDate 			Publicatie moment van de feed on a hourly, daily, weekly... basis
+ * lastBuildDate 	De laatste keer dat de inhoud van de channel is veranderd		
+ * List<category> 	lijst van categorien waarbij het artikel hoort
+ * generator		String indicating the software used to generate feed
+ * docs				Url that points to docs
+ * cloud			webservice for processes to be notified for changes, updates
+ * ttl				number of minutes
+ * image			URL van gif, jpeg of png image 
+ * rating			The pics rating for the channel
+ * textInput		text input box
+ * skipHours		Xml element met de uren in om te skippen [0-23]
+ * skipDays			Xml element met de dagen in om te skippen [monday-sunday]
+
+![Screenshot](https://www.github.com/readerAppRafKurt/WebcomponentApp/raw/master/UML/images/rss-2.0-standard.jpg)
+
+
+
+
+
+##UML class diagram
