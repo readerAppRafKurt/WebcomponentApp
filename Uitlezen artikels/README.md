@@ -6,6 +6,10 @@
 
 ##Screens & prototypes
 <img src='http://www.mofosounds.com/assets/user-story-uitlezen-artikels.jpg' width='553'>
+<img src='https://github.com/readerAppRafKurt/WebcomponentApp/blob/master/images/user-story-uitlezen-artikels.jpg'>
+
+![Settings Window](https://raw.github.com/ryanmaxwell/iArrived/master/Screenshots/Settings.png)
+
 <br />
 <br />
 
@@ -39,3 +43,5 @@
 5. Repository?
 6. Utils
 7. Tests
+
+##UML class diagram
