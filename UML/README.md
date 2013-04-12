@@ -7,7 +7,7 @@ Meer info op: http://cyber.law.harvard.edu/rss/rss.html
 ![Screenshot](https://www.github.com/readerAppRafKurt/WebcomponentApp/raw/master/UML/images/rss-2.0-standard.jpg)
 
 
-###RSS 2.0 Standaard voor een channel/rss-feed
+###RSS 2.0 Standaard voor een channel, rss-feed
  
 	Required properties:
  
@@ -23,14 +23,14 @@ Meer info op: http://cyber.law.harvard.edu/rss/rss.html
 	 webMaster 			Emailadres - Technische issues  
 	 pubDate 			Publicatie moment van de feed on a hourly, daily, weekly... basis
 	 lastBuildDate 		De laatste keer dat de inhoud van de channel is veranderd		
-	 List<category> 	lijst van categorien waarbij het artikel hoort
+	 List<category> 	Lijst van categorieën waarbij het artikel hoort
 	 generator			String indicating the software used to generate feed
 	 docs				Url that points to docs
-	 cloud				webservice for processes to be notified for changes, updates
-	 ttl				number of minutes
+	 cloud				Webservice for processes to be notified for changes, updates
+	 ttl				Number in minutes
 	 image				URL van gif, jpeg of png image 
 	 rating				The pics rating for the channel
-	 textInput			text input box
+	 textInput			Text input box
 	 skipHours			Xml element met de uren in om te skippen [0-23]
 	 skipDays			Xml element met de dagen in om te skippen [monday-sunday]
 
@@ -49,6 +49,6 @@ Meer info op: http://cyber.law.harvard.edu/rss/rss.html
 	 enclosure 			Url naar een media-object (image, video, audio) dat bij het artikel hoort  
 	 guid 				Unieke identifier voor het artikel, meestal een url. 
 	 pubDate 			Publicatie datum van het artikel 
-	 source 			de RSS-feed of channel waarbij het artikel hoort
+	 source 			De RSS-feed of channel waarbij het artikel hoort
 	 
 	 
