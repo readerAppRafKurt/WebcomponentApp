@@ -6,7 +6,7 @@
 
 ##Screens & prototypes
 
-![Screenshot](https://www.github.com/readerAppRafKurt/WebcomponentApp/raw/master/images/user-story-uitlezen-artikels.jpg)
+![Screenshot](https://www.github.com/readerAppRafKurt/WebcomponentApp/raw/master/UML/images/user-story-uitlezen-artikels.jpg)
 
 
 
