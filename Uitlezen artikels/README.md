@@ -5,8 +5,7 @@
 <br />
 
 ##Screens & prototypes
-<img src='http://www.mofosounds.com/assets/user-story-uitlezen-artikels.jpg' width='553'>
-<img src='https://raw.github.com/readerAppRafKurt/WebcomponentApp/blob/master/images/user-story-uitlezen-artikels.jpg'>
+
 ![Screenshot](https://www.github.com/readerAppRafKurt/WebcomponentApp/raw/master/images/user-story-uitlezen-artikels.jpg)
 
 
