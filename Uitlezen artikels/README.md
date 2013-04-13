@@ -45,3 +45,6 @@
 7. Tests
 
 ##UML class diagram
+
+##WebComponent
+Dit project staat ook te draaien op http://www.mofosounds.com/nieuwsblad/uitlezen-artikels

@@ -1,0 +1,189 @@
+<!DOCTYPE HTML>
+<html lang="nl">
+<head>
+	
+    <title>Uitlezen van rss-feeds</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.css" />
+    <link rel="stylesheet" href="css/main.css" />
+	
+	<script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.js"></script>
+	<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript" src="javascripts/scrollPane.js"></script>
+
+	
+	<script type="text/javascript">
+
+	google.load("feeds", "1");
+
+    function initialize() {
+	 
+	  //Hardcoded feed inlezen met de google feed api	
+	  var feed = new google.feeds.Feed("http://www.nieuwsblad.be/rss.aspx?foto=1&intro=1&full=1&mobile=1&sectionid=55178e67-15a8-4ddd-a3d8-bfe5708f8932");
+	  feed.setResultFormat(google.feeds.Feed.MIXED_FORMAT);//Mixed formaat (xml en json) zetten, zodat we aan de foto's(enclosure-tag) kunnen
+	  feed.setNumEntries(15); //default laadt dat spel maar 4 feeds in
+	  
+	  feed.load(function(result) {
+        if (!result.error) {
+			
+	 		document.getElementById("rss-feedTitle").innerHTML = result.feed.title;//rss-feed titel naar view schrijven
+		  	var feedContainer = document.getElementById("feedContainer");//containerdiv koppelen waar we alle feeds in steken, deze staat reeds in onze static html code
+			var articleDetail = document.getElementById("articleDetail");
+			
+			for (var i = 0; i < result.feed.entries.length; i++) {
+            
+				//Gevonden artikels in een array steken
+				var entry = result.feed.entries[i];
+				
+				//foto van artikel ophalen, werkt niet goed, haalt enkel de artikels op met foto's en laadt diegene zonder niet in
+				//entryImageUrl = entry.xmlNode.getElementsByTagName("enclosure")[0].getAttribute("url") ;
+				//alert("artikelfoto: " + entry.xmlNode.getElementsByTagName("enclosure")[0].getAttribute("url"));
+				
+				//Box aanmaken voor artikel
+				var artikelWrapper = document.createElement("div");
+				artikelWrapper.setAttribute("class", "artikelWrapper");
+				
+				//Detailwrapper aanmaken voor een artikel
+				var artikelDetailedWrapper = document.createElement("div");
+				artikelDetailedWrapper.setAttribute("class", "artikelDetailedWrapper");
+				
+				//artikel titel div
+				var artikelTitelDiv = document.createElement("div");
+				artikelTitelDiv.setAttribute("class", "artikelTitel"); //nodige attributen aan tag koppelen -> document.createElement("div class=\"artikel titel\"" ) werkt niet
+				artikelTitelDiv.appendChild(document.createTextNode(entry.title));//Artikeltitel tag opvullen met de juiste tekst  ->  entry.title </div>
+				
+				//artikel titel detailed -> Om de een of andere reden overschrijft jQuery deze, daarom een copy van de titel voor detaildiv
+				var artikelTitelDetailed = document.createElement("div");
+				artikelTitelDetailed.setAttribute("class", "artikelTitelDetailed"); 
+				artikelTitelDetailed.appendChild(document.createTextNode(entry.title));
+				
+				//horizontale lijn tussen twee artikels, just css-styling
+				var horizontalLine = document.createElement("div");
+				horizontalLine.setAttribute("class", "horizontalLine");
+				
+				//contentSnippet div
+				var artikelDescriptionDiv = document.createElement("div");
+				artikelDescriptionDiv.setAttribute("class", "artikelContent");
+				artikelDescriptionDiv.appendChild(document.createTextNode(entry.contentSnippet));
+				
+				//content div
+				var artikelDescriptionDetailed = document.createElement("div");
+				artikelDescriptionDetailed.setAttribute("class", "artikelDescriptionDetailed");
+				var content = entry.content;
+				var content = escape(content);//String tijdelijk strippen van speciale characters zoals ('"...), moet achteraf terug worden ge-unescaped
+				artikelDescriptionDetailed.innerHTML= content; //content kan html-code bevatten, daarom innerHTML gebruiken ipv createTextNode
+				
+				//datum tag voor artikel aanmaken
+				var publishedDate = document.createElement("div");
+				publishedDate.setAttribute("class", "publishedDate");
+				var datum = entry.publishedDate; 
+				publishedDate.appendChild(document.createTextNode(datum));
+				
+				//datum tag voor artikelDetail aanmaken -> Jquery overschrijft deze , daarom een duplicaat aanmaken
+				var publishedDateDetailed = document.createElement("div");
+				publishedDateDetailed.setAttribute("class", "publishedDateDetailed");
+				var datum = entry.publishedDate; 
+				publishedDateDetailed.appendChild(document.createTextNode(datum));
+	
+				//Artikel in wrapper steken
+				artikelWrapper.appendChild(artikelTitelDiv);
+				artikelWrapper.appendChild(publishedDate);
+				artikelWrapper.appendChild(artikelDescriptionDiv);
+				artikelWrapper.appendChild(horizontalLine);
+				
+				
+								
+				artikelDetailedWrapper.appendChild(artikelTitelDetailed);
+				artikelDetailedWrapper.appendChild(publishedDateDetailed);
+				artikelDetailedWrapper.appendChild(artikelDescriptionDetailed);
+				
+				//Van wrapper een aanklikbare link maken en naar pagina schrijven, waarom hier enkel 'var item' werkt weet ik ni...        	
+				var item = document.createElement('a');
+				//item.href = "#";
+				item.appendChild(artikelWrapper);	
+	
+				/**
+				* onclick event koppelen aan ons item dat de artikelWrapper in een andere div inlaadt, hier enkel om te testen
+				* De bedoeling is dat een gedetailleerde versie in een andere div wordt ingeladen -> Hier moet nog een andere functie(), waar een detail-object 
+				* of verschillende parameters worden doorgegeven, voor worden geschreven
+				* 
+				* Om setAttribute te laten werken in de moderne browsers moeten we gebruik maken van NEW function(){ fill_div ...
+				* Merk ook het juiste escapen van ' op , artikelWrapper.outerHTML moet buiten de string vallen, anders werkt dit enkel in FF
+				* Onderstaande regel werkt in FF 16.0.2, IE 10.0.9, Chrome 23.0.12 en Safari 5.1.7
+				**/
+				item.setAttribute('onclick', 'new function() { fill_div(' + '\'' + artikelDetailedWrapper.outerHTML + '\'' +') }');
+				
+				//Een aantal andere pogingen om het onclick event te zetten die allemaal mislukken, ik laat ze hier staan als mogelijk hulpmiddel voor in de toekomst 
+				
+				//item.setAttribute('onclick', 'fill_div(' + artikelWrapper.outerHTML +')');	//Werkt enkel in FireFox
+				//item.setAttribute("onclick", function() { fill_div(artikelWrapper.outerHTML) });//Werkt nergens
+				
+				//item.onclick = function() { fill_div(artikelWrapper.outerHTML) }; //Werkt overal, maar zet enkel het laatst ingelezen artikel omdat art 
+				//item.onclick = new function() { fill_div(artikelWrapper.outerHTML) }; //Werkt overal, maar ook enkel het laatste artikel
+				//item.onclick = new Function('fill_div(artikelWrapper.outerHTML)'); Werkt nergens
+				//item.onclick = fill_div(artikelWrapper.outerHTML); //Werkt ook niet, dit moet een reference zijn naar een functie, geen functie-call
+			
+				//het artikel als aanklikbare box naar de pagina schrijven
+				feedContainer.appendChild(item);
+          }
+        }
+		
+      });
+    }
+    google.setOnLoadCallback(initialize);
+	
+	/**
+	* Functie die eenartikel in een aparte div steekt
+	**/
+	function fill_div(articleDetail){
+        document.getElementById("articleDetail").innerHTML= unescape(articleDetail);
+    }
+	
+	/**
+	* JQuery functie die een custom slider (image) bindt aan een overflow van een div 
+	**/
+	$(function(){
+		$('.scroll-pane').jScrollPane({scrollbarWidth:12, scrollbarMargin : 100});
+	});
+	
+    </script>
+
+
+</head>
+
+<body>
+	
+    <!--
+    <div data-role="page" data-theme="a" >
+    -->
+
+        <div data-role="header">
+            
+        </div>
+    
+        <div data-role="content"> 
+          
+          	
+                
+                <div id="overflowWrapper">
+			<div id="rss-feedTitle"></div>
+                        <div id="feedContainer"></div>
+		</div>	
+					
+                <div id="articleDetail"></div>
+                   
+              
+            
+            
+        </div>
+        
+    <!--  	         
+	</div>
+    -->
+       
+</body>
+</html>
+
