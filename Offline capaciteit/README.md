@@ -23,8 +23,10 @@ Deze offline-online web applicaties brengen een extra kost met zich mee, met nam
 	
 	1.Web Storage
 		LocalStorage en SessionStorage, 2 key-value manier
+	
 	2.WebSql en indexedDB
 		Uitleg + verschillen 
+	
 	3.Application cache
 		korte inleidende uitleg geven
 		
