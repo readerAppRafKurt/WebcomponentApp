@@ -17,5 +17,5 @@
 	5.If you have selected an archive file containing an entire Eclipse project, the project name will appear in the box below, already checked. Click Finish to perform the import.
 	
 	
-	Meer info met screenshots op http://agile.csc.ncsu.edu/SEMaterials/tutorials/import_export/
-	Je kan ook gewoon hier op github in de code browsen.
+Meer info met screenshots op http://agile.csc.ncsu.edu/SEMaterials/tutorials/import_export/
+Je kan ook gewoon hier op github in de code browsen.
