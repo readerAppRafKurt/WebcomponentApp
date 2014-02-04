@@ -7,7 +7,7 @@ Meer info op: http://cyber.law.harvard.edu/rss/rss.html
 ![Screenshot](https://www.github.com/readerAppRafKurt/WebcomponentApp/raw/master/UML/images/rss-2.0-standard.jpg)
 
 
-###RSS 2.0 Standaard voor een channel, rss-feed
+###RSS 2.0 Standaard voor een rss-feed
  
 	Required properties:
  
